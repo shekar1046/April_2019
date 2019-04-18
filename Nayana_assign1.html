@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment1</title>
+
+    <style>
+        
+        div {
+            border: 1px solid grey;
+        }
+
+        div h4 {
+            text-align: center;
+        }
+
+        #one img {
+            width: 25%;
+            height: 25%;
+        }
+
+        #two table,
+        tr,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(224, 236, 171);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(147, 240, 212);
+        }
+
+        th {
+            background-color: rgb(61, 60, 60);
+            color: white;
+        }
+
+        #three form {
+            text-align: center;
+            margin: 0 auto;
+            width: 350px;
+            border: 1px dotted red;
+        }
+
+        ul {
+            overflow: hidden;
+            background-color:rgb(21, 75, 42);
+            list-style-type:none;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropMenu {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        li a:hover,  .drop:hover .dropMenu, .options a:hover{
+            background-color:green;
+        }
+
+        .options {
+            display: none;
+            position: absolute;
+            background-color: #d1f8db;   
+        }
+
+        .options a {
+            color:black;
+            text-align:left;
+            display: block;
+        }
+
+        .drop:hover .options {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Assignment1</h2>
+
+    <div id="one">
+        <h4>Basic HTML elements </h4>
+        <h5>San Francisco</h5>
+        <img src="https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx" alt="San Francisco">
+        <p>
+            <strong>San Francisco</strong> , in northern <em>California</em>, is a hilly city on the tip of a peninsula
+            surrounded by the Pacific Ocean and San Francisco Bay. It's known for its year-round fog, iconic Golden Gate
+            Bridge, cable cars and colorful Victorian houses. The Financial District's Transamerica Pyramid is its most
+            distinctive skyscraper. In the bay sits Alcatraz Island, site of the notorious former prison.</p>
+            <br><br>
+        </div>
+
+    <div id="two">
+        <h4>HTML table </h4>
+        <table align="center" width=50%;>
+            <caption> <strong>Student</strong> </caption>
+
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th colspan="2">Score in 2 tests</th>
+                <th>Avg score </th>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Ann</td>
+                <td>90</td>
+                <td>100</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Joe</td>
+                <td>40</td>
+                <td>60</td>
+                <td>50</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td> Mary</td>
+                <td>50</td>
+                <td>60</td>
+                <td>55</td>
+            </tr>
+
+            <tr>
+                <td>40</td>
+                <td>Tom</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+
+        </table>
+        <br><br>
+        <br><br>
+    </div>
+
+    <div id="three">
+        <h4>HTML form </h4>
+        <form action="/action_page.php">
+            <br><br>
+            <label>First Name</label>
+            <input type="text" name="First Name" />
+            <br><br>
+            <label>Last Name</label>
+            <input type="text" name="Last Name" />
+            <br><br>
+            <label>Gender</label>
+            <select name="Gender">
+                <option value="Val1" selected="selected">Male</option>
+                <option value="Val2">Female</option>
+                <option value="Val3">Other</option>
+            </select>
+            <br><br>
+            <label>Email</label>
+            <input type="text" name="Email" />
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="Password" value="" />
+            <br><br>
+            <input type="button" name="Submit" value="Submit" />
+            <br><br>
+        </form>
+        <br><br>
+        <br><br>
+    </div>
+
+    <div id="four">
+        <h4>Embedded video </h4>
+        <video controls>
+            <source src="http://techslides.com/demos/samples/sample.mp4">
+            Video not supported!
+        </video>
+        <br><br>
+        <br><br>
+    </div>
+
+    <div id="five">
+        <h4>Navigation bar </h4>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="drop">
+                <a href="#five" class="dropMenu">Assignment Options</a>
+                <div class="options">
+                    <a href="#one">Basic HTML elements </a>
+                    <a href="#two">HTML Table</a>
+                    <a href="#three">HTML Form </a>
+                    <a href="#four">Embedded video </a>
+                </div>
+            </li>
+        </ul>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+    </div>
+
+</body>
+
+</html>
