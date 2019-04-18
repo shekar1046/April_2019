@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html Assignment</title>
+    <style>
+      .innerLi {
+          display:none;
+      }
+      .first:hover{
+          display:block;
+      }
+      ul {
+    padding: 0;
+    margin: 0;
+        }
+        li{
+            display: inline;
+            position: relative;
+            padding:10px;
+            margin-left:30px;
+        }
+       ul ul{
+           display: none;
+           position: absolute;
+       }
+       li:hover ul {
+    display: block;
+    text-decoration: none;
+}
+        
+        h1,p{
+            text-align: center;
+        }
+        table{
+            width:100%;
+           
+        }
+    table tr:nth-child(even){
+        background-color: #c4c4c4;
+            }
+        table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px;
+            font-family:verdana;
+            font-size: 14px;
+        }
+        th{
+            text-align: left;
+        }
+    #loginForm{
+        padding-top: 20px;
+       width:20%;
+       margin-left: 20px;
+    }
+    input{
+        width:150px;
+        padding: 5px;
+    }
+    #email{
+        margin: 15px 0px 15px 0px;
+    }
+    #submit{
+        width:90px;
+       background-color: gray;
+      margin-left: 80px;
+      margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+            <ul>
+                    <li>
+                        <a href="#">Courses</a>
+                        <ul>
+                            <li><a href="#">Html</a></li>
+                            <li><a href="#">Css</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Teachers</a>
+                        <ul>
+                            <li><a href="#">Steven</a></li>
+                            <li><a href="#">Mary</a></li>
+                            <li><a href="#">Mike</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            
+        
+    <h1>Our First Assignment</h1>
+    <p><strong>This is our first assignment</strong></p>
+    <img src="" alt=""> 
+    <table>
+        <tr>
+            
+                    <th colspan="3">Course</th>
+                    <th colspan="3">Level</th>
+                    <th colspan="3">Purpose</th>
+        </tr>
+        <tr>
+            
+            <td colspan="3">Html</td>
+            <td colspan="3">Easy</td>
+            <td colspan="3">Plain Contents</td>
+        </tr>
+        <tr>
+                <td colspan="3">Bootstrap</td>
+                <td colspan="3">Medium</td>
+                <td colspan="3">Styling</td>
+            </tr>
+            <tr>
+                    <td colspan="3">Javascript</td>
+                    <td colspan="3">Hard</td>
+                    <td colspan="3">Adds Functionality</td>
+            </tr>
+    </table>
+    <div id="loginForm">
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Enter username here"/>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="enter email here"/></br>
+       
+                
+        <input type="radio" name="gender" value="Female" checked> Female</br>
+         <input type="radio" name="gender" value="Male"> Male
+           <p class="course">Please select the course you would like to take.</p>
+         <select name="carlist" form="carform">
+                <option value=Html">Html</option>
+                <option value="Css">Css</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Bootstrap">Bootstrap</option>
+         </select></br>
+       
+        
+
+        <input type="submit" name="submit" id="submit" value="Submit"/>
+    </form>
+    </div>
+</div>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+    
+</body>
+</html>
