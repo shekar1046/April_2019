@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>QuestGamer</title>
+    <link rel="stylesheet" type="text/css" href="Nayana_quest.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+
+        <div id='head'>
+            <h1><a href="#">QUEST GAMER</a></h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBsfYTT2tmrFPOV6WccJA6IsfI3BRxSPEDhuKDnyvlDReMxfE8Dw"
+                width="1250" height="200px" alt="gamer life header image">
+        </div>
+        <div id="top-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="drop">
+                    <a href="#" class="dropMenu">Top Products</a>
+                    <div class="options">
+                        <a href="https://www.apple.com/itunes/charts/top-grossing-apps/" target="_blank"> IOS Games </a>
+                        <a href="https://play.google.com/store/apps/category/GAME?hl=en_US" target="_blank"> Android
+                            Games </a>
+                        <a href="https://store.playstation.com/en-us/home/games?emcid=se-pi-194278&gclid=EAIaIQobChMIsJjgtZXq4QIVyB6tBh3V2wlTEAAYASAAEgKBEvD_BwE&gclsrc=aw.ds&kcn=search&semdid=43700037161088367&semid=xconfid=r3w9h1xzi"
+                            target="_blank"> PS4 Games </a>
+                        <a href="http://www.agame.com/games" target="_blank"> Online Games </a>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a href="#" class="dropMenu">Latest Releases</a>
+                    <div class="options">
+                        <a href="https://www.mindgames.com/game/Honey+Bee" target="_blank">BumbleBee2.0 (IOS) </a>
+                        <a href="https://www.gamesgames.com/game/ultimate-boxing"
+                            target="_blank">FighterJack3.2 (PS4)</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.twodboy.worldofgoofull"
+                            target="_blank">MysteryMind1.0 (Android)</a>
+                    </div>
+                </li>
+                <li> <a href="https://www.gamespot.com/news/">News </a> </li>
+                <li> <a href="#">Careers</a> </li>
+            </ul>
+            <p><em>Follow us on </em>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="https://about.twitter.com/etc/designs/about-twitter/public/img/favicon-32x32.png"
+                        alt="twitter bird" /></a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank">
+                    <img src="https://love2dev.com/img/2000px-instagram_logo_2016svg-2000x2000.png" alt=instagram> </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="https://smmcmq1qh0-flywheel.netdna-ssl.com/wp-content/uploads/2018/05/FB-Favicon.png"
+                        alt=facebook> </a>
+            </p> <br>
+        </div>
+    </header>
+
+    <div id="content1">
+        <p> Play our games on a wide range of devices including online, mobile and playstation </p> <br>
+        <img class="mySlides"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREKCq__qYgZ8XKwxnGxnFhG6qogPxSMZ1YI2NZopY2LItfHjjt"
+            alt="fighter game" style="height:350px; width:600px">
+        <img class="mySlides"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFkgCkvfgmouaEh-1fJfT20Ti67N2HLaEJ2wRk4kt164hxDcc1"
+            alt="PS game" style="height:350px; width:600px">
+        <img class="mySlides"
+            src=" https://www.telegraph.co.uk/content/dam/gaming/2017/07/19/Splatoon-2_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.jpg?imwidth=450"
+            alt="bubble gum game" style="height:350px; width:600px">
+        <img class="mySlides"
+            src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIbI7VtEHU55_U07Rs5JlrdaTLULOmAVzwAQ9eBBwam93cq-Or"
+            alt="mobile game" style="height:350px; width:600px">
+        <br><br>
+    </div>
+
+    <script>
+        var index = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            index++;
+            if (index > x.length) { index = 1 }
+            x[index - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+
+    <footer>
+
+        <ul class="foot">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+        <div id="copy">
+            <br>
+            <small> &copy; 2019 Quest Gamers Corporation. All Rights Reserved.</small>
+            <br><br>
+        </div>
+    </footer>
+</body>
+
+</html>
