@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<!--
+HTML form assignment 
+created by Nayana Kamath 
+created on 04.25.2019
+-->
+
+<html lang="en">
+
+<head>
+    <title>Form Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Nayana_Form.css">
+    <script>
+        function printValue(sliderID, textbox) {
+            var sliderValue = +document.getElementById(sliderID).value;
+            document.getElementById(textbox).value = sliderValue.toFixed(2);
+        }
+        window.onload = function () { printValue('gpa', 'rangeValue'); }
+    </script>
+</head>
+
+<body>
+    <h2> Student Information Form </h2>
+    <form enctype="multipart/form-data" action="http://cobhomepages.cob.isu.edu/parkerkr/formHandler.php" method="post">
+        <div id="PersonalInfo">
+            <p>Personal Information</p>
+            <table>
+                <tr>
+                    <th><label>Title: </label></th>
+                    <th> <label>First Name:</label> </th>
+                    <th> <label>Last Name:</label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="titleGroup" value="Mr" required autofocus/> Mr.<br>
+                        <input type="radio" name="titleGroup" value="Mrs" /> Mrs.<br>
+                        <input type="radio" name="titleGroup" value="Ms" /> Ms.
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required
+                            maxlength="20" />
+                    </td>
+                    <td>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required
+                            maxlength="20" />
+                    </td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div id="ContactInfo">
+            <p>Contact Information</p>
+            <table>
+                <tr>
+                    <th><label>eMail: </label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email Address" required />
+                    </th>
+                    <th> <label>Mobile Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="US (999) 999-9999 or international"
+                            required
+                            pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" />
+                    </th>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div id="EnrollmentInfo">
+            <p>Enrollment Information</p>
+            <table>
+                <tr>
+                    <th><label>Date first enrolled: </label>
+                        <input type="date" id="dateEnrolled" name="dateEnrolled" required />
+                    </th>
+                </tr>
+                <tr>
+                    <th><label>Major: </label> </th>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" name="major[]" value="Business Informatics" /> Business Informatics<br>
+                        <input type="checkbox" name="major[]" value="Health Informatics" /> Health Informatics<br>
+                        <input type="checkbox" name="major[]" value="Computer Science" /> Computer Science<br>
+                        <input type="checkbox" name="major[]"
+                            value="Informatics Post-Baccalaureate Certificate" />Informatics Post-Baccalaureate
+                        Certificate <br>
+                        <input type="checkbox" name="major[]" value="Informatics Minor" /> Informatics Minor<br>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>Indicate your GPA: </label> </th>
+                </tr>
+                <tr>
+                    <td> <input type="range" id="gpa" name="gpa" onchange="printValue('gpa','rangeValue')">
+                        <output id="rangeValue"></output>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>INFO Classes taken: </label></th>
+                </tr>
+                <tr>
+                    <td> <select id="classes" name="classes[]">
+                            <option value="Val1" selected="selected">INFO 1181</option>
+                            <option value="Val2">INFO 1182</option>
+                            <option value="Val2">INFO 2285</option>
+                            <option value="Val2">INFO 3307</option>
+                            <option value="Val2">INFO 3380</option>
+                            <option value="Val2">INFO 4407</option>
+                        </select> </td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div id="EmployementInfo">
+            <p>Employement Information</p>
+            <table>
+                <tr>
+                    <th><label>Are you employed?</label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="employedGroup" value="yes" required /> Yes<br>
+                        <input type="radio" name="employedGroup" value="no" /> No
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>If so, full time or part time?</label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="employmentTypeGroup" value="full" /> Full Time<br>
+                        <input type="radio" name="employmentTypeGroup" value="part" /> Part Time
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>If you are interested in internships, etc., please upload your resume: </label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="file" name="resume" />
+                    </td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div id="hidden">
+            <input type="hidden" id="source" name="source" value="INFO1110Form">
+        </div>
+        <div id="Feedback">
+            <p>Feedback</p>
+            <table>
+                <tr>
+                    <th><label>If so you have any ideas to improve...</label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="comments" name="comments" rows="5" cols="50">
+                           </textarea>
+                    </td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div id="buttons">
+            <button type="submit" id="submit" name="submit">
+                Submit Data
+            </button>
+
+            <input type="reset" id="reset" name="reset" value="Reset Form"/> 
+            <br>
+        </div>
+        <hr>
+        <br>
+    </form>
+</body>
+
+</html>

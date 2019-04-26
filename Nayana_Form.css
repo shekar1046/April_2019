@@ -1,0 +1,92 @@
+h2{
+    color: rgb(218, 139, 37);
+    margin-left:10px; 
+}
+
+p{
+    color: rgb(218, 139, 37);
+    font-size: 16px;
+    margin-left:20px; 
+}
+
+#PersonalInfo {
+border: thin solid black;
+}
+
+#PersonalInfo th{
+    padding-left: 1px;
+}
+
+#PersonalInfo td{
+    padding-left: 50px;
+}
+
+#ContactInfo {
+    border: 1px solid black;
+    margin-top: 30px;
+    }
+        
+#ContactInfo th{
+ padding: 10px;
+}
+        
+#ContactInfo td{
+padding-left: 70px;
+}
+
+#EnrollmentInfo {
+    border: 1px solid black;
+    margin-top: 30px;
+    }
+
+#EnrollmentInfo tr td{
+    padding-left: 50px;
+}
+
+#EnrollmentInfo tr th{
+    padding-left: 15px;
+   float: left;
+
+}
+
+#EmployementInfo {
+    border: 1px solid black;
+    margin-top: 30px;
+    }
+
+#EmployementInfo tr td{
+    padding-left: 50px;
+}
+
+#EmployementInfo tr th{
+    padding-left: 15px;
+   float: left;
+
+}
+
+#Feedback {
+    border: 1px solid black;
+    margin-top: 30px;
+    }
+   
+#Feedback tr td{
+        padding-left: 20px;
+}
+
+#Feedback tr th{
+    padding-left: 15px;
+   float: left;
+
+}
+
+ #buttons{
+    padding: 35px;
+    word-spacing: 50px;
+ }   
+
+ #buttons #submit, #reset{
+    background-color:rgb(228, 218, 218);
+    color: rgb(218, 139, 37);
+    font-size: 16px;
+    border-radius: 5px;
+ }
