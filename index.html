@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding:20px;
+        }
+        h1,legend{
+            color:brown;
+            font-weight: bold;
+        }
+        #studentForm{
+            padding:30px;
+        }
+        .personalinfo{
+            height:95px;
+            margin-bottom: 25px;
+        }
+       .fname{
+           margin-left:50px;
+           
+            
+        }
+        .lname{
+            margin-left: 50px;
+        }
+        .phoneNumber{
+            margin-left: 20px;
+        }
+        .contactinfo,.enrollinfo,.empinfo,.feedback{
+            margin-bottom: 25px;
+           
+        }
+        .enrollinfo{
+            padding:30px;
+        }
+        .infoSelect{
+            width:200px;
+            margin-left: 20px;
+        }
+            .infoSelect option:first-child{
+                
+            background: brown;
+    
+    
+            }
+            
+        
+        textarea{
+            background-color: #f2f2f2;
+        }
+        button{
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="formContainer">
+        <form id="studentForm">
+            <h1>ICS Student Information</h1>
+            <fieldset class="personalinfo">
+                <legend>Personal Information</legend>
+                <label>Title:</label><br>
+                        <input type="radio" name="title" id="title1">Mr.   <label for="fname" class="fname">First Name</label><input type="text" name="fname" id="fname" placeholder="Enter first name">  <label for="lname" class="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" placeholder="Enter last name"><br>
+                    
+                        <input type="radio" name="title" id="title2">Mrs.<br>
+                        <input type="radio" name="title" id="title2">Ms.  
+                  
+            
+               
+                
+            </fieldset>
+            <fieldset class="contactinfo">
+                    <legend>Contact Information</legend>
+                    <label for="email">Email:</label> <input type="email" name="email" id="email" placeholder="Enter your email address"><label class="phoneNumber" for="phone">Mobile Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="US(999)999-9999"><br>
+                           
+                    
+                          
+                    
+                    
+            </fieldset>
+                    <fieldset class="enrollinfo">
+                        <legend >Enrollment Information</legend>
+                        <label for="date">Date first enrolled:</label>
+                        <input type="date" id="date"><br><br>
+                        <label>Major:</label><br>
+                        <input type="checkbox">Business Informatics<br>
+                        <input type="checkbox">Health Informatics<br>
+                        <input type="checkbox">Computer Science<br>
+                        <input type="checkbox">Information Post-Baccalaureate Certificate<br><br>
+                        <label>Indicate your GPA:</label><br><br>
+                        <input type="range" max="2"><br><br>
+                        <label>INFO Classes Taken:</label><br>
+
+                        <select class="infoSelect" size="4">
+                            <option value="INFO 1181">INFO 1181</option>
+                            <option value="INFO 1182">INFO 1182</option>
+                            <option value="INFO 2285">INFO 2285</option>
+                            <option value="INFO 3307">INFO 3307</option>
+                            <option value="INFO 3307">INFO 3308</option>
+                        </select>
+                        
+
+                    </fieldset>
+                    <fieldset class="empinfo">
+                        <legend>Employement Information</legend>
+                            <label>Are you employed?</label><br>
+                            <input type="radio">Yes<br>
+                            <input type="radio">No<br><br>
+                        <label>If so, full time or part time?</label><br>
+                        <input type="radio">Full Time<br>
+                            <input type="radio">Part Time<br><br>
+                        <p>If you are interested in internships, etc...please upload your resume:<br><input type="file" value="choose file"></p>
+                            </fieldset>
+                            <fieldset class="feedback">
+                                <legend>Feedback</legend>
+                                <p>Please share any ideas that you have for improving the ICS Department.</p>
+                                <textarea rows="6" cols="50"></textarea>
+                            </fieldset>
+                            <button>Submit data</button>
+                            <button>Reset Form</button>
+                            <hr/>
+                    </form>
+
+    </div>
+    
+</body>
+</html>
