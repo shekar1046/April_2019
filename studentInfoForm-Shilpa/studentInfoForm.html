@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form assignment</title>
+        <link rel="stylesheet" type="text/css" href="./studentInfoForm.css">
+    </head>
+    <body>
+        <h1>ICS Student Information Form</h1>
+        <form enctype="multipart/form-data" id="form" action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="personal">
+                    <label>Title:</label><br />
+                    <input type="radio" name="titleGroup" value="Mr" required autofocus>Mr.<br />
+                    <input type="radio" name="titleGroup" value="Mrs">Mrs.<br />
+                    <input type="radio" name="titleGroup" value="Ms">Ms.<br />
+                </div>
+                <div class="personal name">
+                    <label for="firstName">First Name:</label><br/> 
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="20" required><br />
+                </div>
+                <div class="personal name">
+                    <label for="lastName">Last Name:</label><br/> 
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="20" required><br />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="contact">
+                    <label for="email"> eMail:</label> 
+                    <input type="email" id="email" name="email" placeholder="Enter your Email Address" required><br />
+                </div>
+                <div class="contact">
+                    <label for="phone"> Mobile Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="US:(999)999-9999 or International number" pattern = "^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required><br />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Enrollment Information</legend>
+                <div class="enroll">
+                    <label for="dateEnrolled">Date first enrolled:</label> 
+                    <input type="date" id="dateEnrolled" name="dateEnrolled" required><br />
+                </div>
+                <div class="enroll">
+                    <label>Major:</label><br />
+                    <input type="checkbox" name="=major[]" value="Business">Business Informatics<br />
+                    <input type="checkbox" name="=major[]" value="Health">Health informatics<br />
+                    <input type="checkbox" name="=major[]" value="Computer">Computer Science<br />                        
+                    <input type="checkbox" name="=major[]" value="Baccalaureate">Informatics Post-Baccalaureate Certificate<br />
+                </div>
+                <div id="range">
+                    <label for="gpa">Indicate your GPA:</label><br />
+                    <input type="range" id="gpa" name="gpa" min="0.0" max="4.0" step="0.10" onchange="printValue('gpa','rangeValue')">
+                    <output id="rangeValue"></output><br />
+                </div>
+                <div class="enroll" id="info">
+                    <label>INFO Classes Taken:</label>
+                    <select id="classes" name="classes[]" size="4">
+                        <option value="INFO 1181" selected>INFO 1181</option>
+                        <option value="INFO 1182">INFO 1182</option>
+                        <option value="INFO 2285">INFO 2285</option>
+                        <option value="INFO 3307">INFO 3307</option>
+                        <option value="INFO 3380">INFO 3380</option>
+                        <option value="INFO 4407">INFO 4407</option>
+                    </select>
+                </div>                        
+            </fieldset>
+            <fieldset>
+                <legend>Employment Information</legend>
+                <div class="employment">
+                    <label>Are you employed?</label><br />
+                    <input type="radio" name="employedGroup" value="Yes" required>Yes<br />
+                    <input type="radio" name="employedGroup" value="No">No<br />
+                </div>
+                <div class="employment">
+                    <label>If so, full time or part time?</label><br />
+                    <input type="radio" name="employmentGroup" value="Full Time" required>Full Time<br />
+                    <input type="radio" name="employmentGroup" value="Part Time">Part Time<br />
+                </div>
+                <div class="employment">
+                    <label for="resume">If you are interested in internships, etc., please upload your resume.</label><br/>
+                    <input type="file" id="resume" name="resume">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Feedback</legend>
+                <label for="comments">Please share any ideas that you have for improving the ICS Department.</label><br/>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                <input type="hidden" id="source" name="source" value="INFO1110Form">
+            </fieldset>
+            <button type="submit" id="submit" name="submit" value="submit">Submit Data</button>
+            <input type="reset" id="reset" name="reset" value="Reset Form">
+            <hr />
+        </form>
+        
+        <script>
+            function printValue(sliderID, textbox) {
+                var sliderValue = +document.getElementById(sliderID).value;
+                document.getElementById(textbox).value = sliderValue.toFixed(2);
+            }
+
+            window.onload = function() { printValue('gpa', 'rangeValue'); }
+        </script>
+    </body>
+</html>
