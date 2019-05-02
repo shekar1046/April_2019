@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Dashboard</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<br>
+	<button id="btnSubmit" type="button" class="btn btn-danger" style="margin-left: 85%;" onClick="logoutFunction()">Logout</button>
+	<br>
+	<header>
+		<h3 align="center">Student data</h3>
+	</header>
+
+	<div id="dispalyUsers">
+		<div class="container">
+			<table class="table table-striped" id="tblStudent">
+				<tr id="zero">
+					<th> Id</th>
+					<th> Name</th>
+					<th>Email</th>
+					<th>Class</th>
+					<th>Date</th>
+					<th>City</th>
+					<th>Country</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+				<tr id="one"> 
+
+					<td> 10</td>
+					<td> Ann K</td>
+					<td>ann@gmail.com</td>
+					<td>UI</td>
+					<td>2019-08-19</td>
+					<td>Dublin</td>
+					<td>USA</td>
+					<td><button id="btnEdit1" class="btn btn-sm btn-primary" onClick="editFunction1()">Edit</button></td>
+					<td><button id="btnDelete1" class="btn btn-sm btn-primary" onClick="delFunction1()">Delete</button></td>
+
+				</tr>
+
+				<tr id="two">
+
+					<td> 40</td>
+					<td> Joe John</td>
+					<td>joe@gmail.com</td>
+					<td>QA</td>
+					<td>2019-09-08</td>
+					<td>Pleasanton</td>
+					<td>USA</td>
+					<td><button id="btnEdit2" class="btn btn-sm btn-primary" onClick="editFunction2()">Edit</button></td>
+					<td><button id="btnDelete2" class="btn btn-sm btn-primary" onClick="delFunction2()">Delete</button></td>
+
+				</tr>
+
+				<tr id="three">
+
+					<td> 90</td>
+					<td> Manu Raj</td>
+					<td>manu@gmail.com</td>
+					<td>QA</td>
+					<td>2018-01-09</td>
+					<td>Delhi</td>
+					<td>India</td>
+					<td><button id="btnEdit3" class="btn btn-sm btn-primary" onClick="editFunction3()">Edit</button></td>
+					<td><button id="btnDelete3" class="btn btn-sm btn-primary" onClick="delFunction3()">Delete</button></td>
+
+				</tr>
+
+				<tr id="four">
+
+					<td> 101</td>
+					<td> Mary Rose</td>
+					<td>mary@gmail.com</td>
+					<td>UI</td>
+					<td>2018-08-20</td>
+					<td>Livermore</td>
+					<td>USA</td>
+					<td><button id="btnEdit4" class="btn btn-sm btn-primary" onClick="editFunction4()"> Edit</button></td>
+					<td><button id="btnDelete4" class="btn btn-sm btn-primary" onClick="delFunction4()">Delete</button></td>
+
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+	<br>
+	<header>
+		<h3 align="center">Manage student data</h3>
+	</header>
+	<div id="manageUsers">
+		<section id="userDetails">
+			<div class="container">
+				<div class="jumbotron">
+					<form id="frmDashboard">
+						<label for="inputID">Student ID</label>
+						<input type="text" name="id" id="dashid" class="form-control" autofocus>
+						<br>
+						<label for="inputName">Student Name</label>
+						<input type="text" name="name" id="dashname" class="form-control">
+						<br>
+
+						<label for="inputEmail">Email</label>
+						<input type="email" name="email" id="dashemail" class="form-control">
+						<br>
+						<label for="inputClass">Class</label>
+						<input type="text" name="class" id="dashclass" class="form-control">
+						<br>
+
+						<label for="inputID"> Enrollment Year</label>
+						<input type="date" name="date" id="dashdate" class="form-control" >
+						<br>
+						<label for="inputName">City</label>
+						<input type="text" name="city" id="dashcity" class="form-control">
+						<br>
+
+						<label for="inputID"> Country </label>
+						<input type="text" name="country" id="dashcountry" class="form-control">
+						<br>
+
+						<button id="btnSave" type="button" class="btn btn-success"
+							style="margin-left: 30%;" onClick="saveFunction()">Save</button>
+						<button id="btnClear" type="button" class="btn btn-danger"
+							style="margin-left: 50px;" onClick="clearFunction()">Clear</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+<script src="validation.js"></script>
+</body>
+
+</html>
