@@ -21,12 +21,12 @@
             
             
         }
-     .form{
-        box-sizing: border-box;
+     .home, .reg, .form-section{
+       
           
             width:350px;
             background: #e3e3e3;
-          
+          border:1px solid #eee;
             padding:20px;
             height:auto;
            margin: 60px auto 0px auto;
@@ -47,15 +47,15 @@
         #login{
             margin-left:90px;
         }
-        .reg{
+      /*  .reg{
             box-sizing: border-box;
-            width:400px;
+            width:350px;
             background: #e3e3e3;
           
             padding:20px;
             height:auto;
            margin: 60px auto 0px auto;
-        }
+        }*/
         .pop a, .pop2 a{
             font-size: 16px;
             color:#000;
@@ -72,26 +72,28 @@
              text-align: center;
 
         }
-        .form-section{
+       
+        /*.form-section{
            
             padding:20px;
          margin:30px 0px 10px 50px;;
            border: 2px solid #f4f4f4;
-           width:250px;
+           width:350px;
            height:auto;
            background-color: #e3e3e3;
           
-        }
+        }*/
         .login-section input[type="text"]{
            margin:3px;
             width: 250px;
         }
-        @media only screen and (max-width:600px) {
+       /* @media only screen and (max-width:600px) {
   .form-section {
    width:100%;
+   margin-right:40px;
   
   }
-}
+}*/
            
             
         
@@ -100,9 +102,7 @@
             width: 100%;
             text-align: left;
         }
-        .button{
-            width:70px;
-        }
+        
     </style>
     
 </head>
@@ -110,15 +110,17 @@
     <div id="container">
         <div class="row">
              <div class="col-sm-4">
+                 <div class="home">
                 
-                    <form class="form" method="GET" name="myform" id="form">
-                            Email:<input for="email" name="email" id="email" required>
-                            <!--<label for="">Password</label>-->
-                            Password:<input type="password" name="password" id="password" required>
-                            <Button class="btn btn-primary" type="button" onclick="validateLogin()" value="Login">Log in</Button>
-                            <!--input type="button" value="Registration" id="register">-->
-                            <p class="pop">Do not have an account?<a href="#register">Register</a></p>
-                    </form>
+                        <form class="form" method="GET" name="myform" id="form">
+                                Email:<input for="email" name="email" id="email" required>
+                                <!--<label for="">Password</label>-->
+                                Password:<input type="password" name="password" id="password" required>
+                                <Button class="btn btn-primary" type="button" onclick="validateLogin()" value="Login">Log in</Button>
+                                <!--input type="button" value="Registration" id="register">-->
+                                <p class="pop">Do not have an account?<a href="#register">Register</a></p>
+                        </form>
+                    </div>
                 </div>
             <div class="col-sm-4">
                     <div class="reg">
@@ -135,30 +137,31 @@
                         </form>
                  </div>
             </div>
-            <div class="col-sm-4 form-section">
+            <div class="col-sm-4 ">
+                <div class="form-section">
+                    <form action="" class="login-section">
+                    <label for="stud-id">Student Id</label> <input type="text" id="stud-id" >
+                    
+                    <label for="sname">Student Name</label>
+                    <input type="text" id="sname">
+                    <label for="email">Email</label>
+                    
+                    <input type="email" >
+                    <label for="class">Class</label>
+                    <input type="text" id="class">
+                    <label for="enroll">Enrollement Year<wbr></label>
+                        <input type="date" id="enroll">
+                        <label for="city">City</label>
+                        <input type="text" id="city">
+                        <label for="country">Country</label>
+                        <input type="text" id="country"><br>
+                    <button class="btn btn-primary" class="button" id="save" >Save</button>
+                <button class="btn btn-primary"  class="button" id="clear">Clear</button>
+                        
             
-                <form action="" class="login-section">
-                   <label for="stud-id">Student Id</label> <input type="text" id="stud-id" >
-                   
-                   <label for="sname">Student Name</label>
-                   <input type="text" id="sname">
-                   <label for="email">Email</label>
-                   
-                   <input type="email" >
-                   <label for="class">Class</label>
-                   <input type="text" id="class">
-                   <label for="enroll">Enrollement Year<wbr></label>
-                    <input type="date" id="enroll">
-                    <label for="city">City</label>
-                    <input type="text" id="city">
-                    <label for="country">Country</label>
-                    <input type="text" id="country"><br>
-                  <input type="button" value="Save" class="button" id="save" >
-                  <input type="button" value="Clear" class="button" id="clear">
-                    
-        
-                    
-                </form>
+                        
+                    </form>
+                </div>
             </div>
             
 
