@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Login Form">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="./studentData.css">
+        <script type="text/javascript" src="./loginForm.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Class</th>
+                        <th>Year</th>
+                        <th>City</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container1">
+            <form action="#table" method="get">
+
+                <!--Student ID-->
+                <div class="row">
+                    <label class="col-40" for="studentId">Student ID</label>
+                    <input class="col-60" type="number" name="studentId"  id="studentId" required>
+                </div>
+    
+                <!--Student Name-->
+                <div class="row">      
+                    <label class="col-40" for="studentName">Student Name</label>
+                    <input class="col-60" type="text" name="studentName" id="studentName" required>
+                </div>
+
+                    
+                <!--Email-->
+                <div class="row">
+                    <label class="col-40" for="email">Email</label>
+                    <input class="col-60"type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,}$" required>
+                </div>
+                    
+                <!--Class-->
+                <div class="row">
+                    <label class="col-40" for="course">Class</label>
+                    <input class="col-60" type="text" name="course" id="course" required>
+                </div>
+            
+                <!--Enrollment Year-->
+                <div class="row">
+                    <label class="col-40" for="en-year">Enrollment Year</label>
+                    <input class="col-60" type="date" name="en-year" id="en-year" required>
+                </div>
+
+                <!--City-->
+                <div class="row">
+                    <label class="col-40" for="city">City</label>
+                    <input class="col-60" type="city" name="city" id="city" required>
+                </div>
+
+                <!--Country-->
+                <div class="row">
+                    <label class="col-40" for="country">Country</label>
+                    <input class="col-60" type="country" name="country" id="country" required>
+                </div>
+    
+                <div class="row">
+                    <button type="submit" id="save" onsubmit="return save();">Save</button>
+                    <button type="reset" id="clear">Clear</button>
+                </div>
+            </form>    
+        </div>    
+    </body>
+</html>

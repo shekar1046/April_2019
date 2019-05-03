@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Login Form">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="./loginForm.css">  
+        <script type="text/javascript" src="./loginForm.js"></script>
+    </head>
+    <body>
+        <div>
+            <form action="./studentData.html" method="get">
+                <img id="user-logo" src="https://www.energypoverty.eu/sites/default/files/styles/medium/public/default_avator.png?itok=k8aZg8Gk" />
+                <div class="input-container">
+                    <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbDmXhT9ejDcFVKylC_MO3tG4m8adz8oz2yyi84LOSMr7CIcoX" />
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPStWSUAxTgIIwUkMb71xzCClI2g1zmjUMQDK-gi4TjjQHjWS7g"/>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                </div>
+                <input type="checkbox" name="remember" value="remember">Remember Me<br />
+                <div class="submisisions">
+                    <input type="submit" id="login" value="LogIn" onsubmit="return studentData();">
+                    <a href="./registration.html">Sign Up</a>
+                </div>
+            </form>    
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Login Form">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="./registration.css">
+        <script type="text/javascript" src="./loginForm.js"></script>
+    </head>
+    <body>
+        <div>
+            <form action="./loginForm.html" method="get">
+                <div class="left"></div>
+                <div class="right">
+                    
+                    <!--First name-->
+                    <div class="input-container">
+                        <img class="field-icon" src="https://www.energypoverty.eu/sites/default/files/styles/medium/public/default_avator.png?itok=k8aZg8Gk" />
+                        <input type="text" name="fname" placeholder="First Name" required>
+                    </div>
+
+                    <!--Middle name-->
+                    <div class="input-container">
+                            <img class="field-icon" src="https://www.energypoverty.eu/sites/default/files/styles/medium/public/default_avator.png?itok=k8aZg8Gk" />
+                        <input type="text" name="mname" placeholder="Middle Name">
+                    </div>
+                    
+                    <!--Last name-->
+                    <div class="input-container">
+                            <img class="field-icon" src="https://www.energypoverty.eu/sites/default/files/styles/medium/public/default_avator.png?itok=k8aZg8Gk" />
+                            <input type="text" name="lname" placeholder="Last Name" required>
+                        </div>
+                    
+                    <!--Email-->
+                    <div class="input-container">
+                            <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbDmXhT9ejDcFVKylC_MO3tG4m8adz8oz2yyi84LOSMr7CIcoX" />
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                    
+                        <!--Phone-->
+                    <div class="input-container">
+                        <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4xy_Gc5xqNT2T6zFC3P-AOP100tetXEeOwqM-loO9_sCnI_aOMg" />
+                        <input type="tel" name="phone" placeholder="Phone" pattern="^\d{10}$">
+                    </div>
+                
+                    <!--password-->
+                    <div class="input-container">
+                        <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPStWSUAxTgIIwUkMb71xzCClI2g1zmjUMQDK-gi4TjjQHjWS7g"/>
+                        <input type="password" name="password" placeholder="Password" id="password" class="password" required>
+                    </div>
+
+                    <!--confirm password-->
+                    <div class="input-container">
+                        <img class="field-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPStWSUAxTgIIwUkMb71xzCClI2g1zmjUMQDK-gi4TjjQHjWS7g"/>
+                        <input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" class="confirm_password" onfocusout="return pswCheck();" required>
+                    </div>
+
+                    <div class="submisisions">
+                        <input type="submit" id="register" value="Sign Up" onsubmit="login();">
+                    </div>
+                </div>
+                
+            </form>    
+        </div>    
+    </body>
+</html>
