@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body{
+           margin-top:5px;
+           width:100%;
+           
+            background: url("https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+           
+           height:auto;
+            
+            
+        }
+     .form{
+        box-sizing: border-box;
+          
+            width:350px;
+            background: #e3e3e3;
+          
+            padding:20px;
+            height:auto;
+           margin: 60px auto 0px auto;
+        }
+        input{
+            margin: 10px 10px;
+            background-color: #ABB2B9;
+            padding:5px;
+            
+        }
+        
+        input[type="button"]{
+            padding:10px;
+            color:#000;
+            font-weight:bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #login{
+            margin-left:90px;
+        }
+        .reg{
+            box-sizing: border-box;
+            width:400px;
+            background: #e3e3e3;
+          
+            padding:20px;
+            height:auto;
+           margin: 60px auto 0px auto;
+        }
+        .pop a, .pop2 a{
+            font-size: 16px;
+            color:#000;
+            padding:10px;
+
+        }
+        .pop a:hover, .pop2 a:hover{
+           color: #00FFFF 
+        }
+        /*styling save form */
+        #top-header h1{
+            padding-top: 100px;
+             padding-bottom: 0;
+             text-align: center;
+
+        }
+        .form-section{
+           
+            padding:20px;
+         margin:30px 0px 10px 50px;;
+           border: 2px solid #f4f4f4;
+           width:250px;
+           height:auto;
+           background-color: #e3e3e3;
+          
+        }
+        .login-section input[type="text"]{
+           margin:3px;
+            width: 250px;
+        }
+        @media only screen and (max-width:600px) {
+  .form-section {
+   width:100%;
+  
+  }
+}
+           
+            
+        
+        label{
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+        .button{
+            width:70px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="container">
+        <div class="row">
+             <div class="col-sm-4">
+                
+                    <form class="form" method="GET" name="myform" id="form">
+                            Email:<input for="email" name="email" id="email" required>
+                            <!--<label for="">Password</label>-->
+                            Password:<input type="password" name="password" id="password" required>
+                            <Button class="btn btn-primary" type="button" onclick="validateLogin()" value="Login">Log in</Button>
+                            <!--input type="button" value="Registration" id="register">-->
+                            <p class="pop">Do not have an account?<a href="#register">Register</a></p>
+                    </form>
+                </div>
+            <div class="col-sm-4">
+                    <div class="reg">
+                        <form action="registration.html" method="POST" id="register">
+                            First Name:<input type="text" name="fname" required><br>
+                            Middle Name:<input type="text" name="mname"><br>
+                            Last Name:<input type="text" name="lname" required><br>
+                            Email:<input type="email" name="email" required><br>
+                            Mobile Number:<input type="tel" name="mnumber"><br>
+                            Password:<input type="password" name="password" required><br>
+                            Confirm Password:<input type="password" name="cpassword" required>
+                            <button class="btn btn-primary button" type="button" value="Register" name="button">Register</button>
+                            <p class="pop2">Already registered?<a href="#form">Login</a></p>
+                        </form>
+                 </div>
+            </div>
+            <div class="col-sm-4 form-section">
+            
+                <form action="" class="login-section">
+                   <label for="stud-id">Student Id</label> <input type="text" id="stud-id" >
+                   
+                   <label for="sname">Student Name</label>
+                   <input type="text" id="sname">
+                   <label for="email">Email</label>
+                   
+                   <input type="email" >
+                   <label for="class">Class</label>
+                   <input type="text" id="class">
+                   <label for="enroll">Enrollement Year<wbr></label>
+                    <input type="date" id="enroll">
+                    <label for="city">City</label>
+                    <input type="text" id="city">
+                    <label for="country">Country</label>
+                    <input type="text" id="country"><br>
+                  <input type="button" value="Save" class="button" id="save" >
+                  <input type="button" value="Clear" class="button" id="clear">
+                    
+        
+                    
+                </form>
+            </div>
+            
+
+        </div><!--end of row div-->
+    </div><!--end of container div-->
+    <script language="javascript">
+        var people=[
+            {
+                firstname:"ellen",
+                lastname:"davis",
+                middlename:"ella",
+                email:"ellen@gmail.com",
+                phonenumber:"123-456-1234",
+                password:"123"
+
+
+            },
+            {
+                firstname:"kelly",
+                lastname:"clarkson",
+                middlename:"joy",
+                email:"kelly@gmail.com",
+                phonenumber:"124-456-1534",
+                password:"134"
+            },
+            {
+                firstname:"john",
+                lastname:"sky",
+                middlename:"joey",
+                email:"john@gmail.com",
+                phonenumber:"129-458-1524",
+                password:"124"
+            }
+            
+           
+        ]
+           
+         function validateLogin(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var mname = document.getElementById("mname").value;
+            var pnumber = document.getElementById("mnumber").value;
+           
+            
+          for( var i=0; i<people.length; i++){
+                if(email == people[i].email && password == people[i].password){
+                    alert(people[i].firstname  + "" + " is logged in");
+                    return;
+                }
+                
+             }
+             alert("Incorrect email and password");  
+            }
+           
+           </script> 
+</body>
+</html>
