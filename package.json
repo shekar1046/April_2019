@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node.js assignment",
+  "main": "nodehomework1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mimi",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
